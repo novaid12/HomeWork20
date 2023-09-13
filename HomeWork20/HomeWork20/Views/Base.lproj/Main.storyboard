@@ -10,6 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yEc-Er-Sry">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vr1-7T-Zvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="B6r-jf-ewy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qFK-TU-qhM">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
@@ -19,7 +20,6 @@
                         <segue destination="Xm2-Sd-b22" kind="relationship" relationship="rootViewController" id="ruB-RM-H0a"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vr1-7T-Zvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-867" y="-17"/>
         </scene>
@@ -36,7 +36,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="oA7-kt-LQS" kind="relationship" relationship="viewControllers" id="Cm9-Fq-GnG"/>
-                        <segue destination="IST-Az-xkB" kind="relationship" relationship="viewControllers" id="IE1-nx-J3D"/>
+                        <segue destination="IST-Az-xkB" kind="relationship" relationship="viewControllers" id="GwJ-VP-o20"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghN-e6-q3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,16 +51,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Noo-md-dFG">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" textLabel="ZoB-Td-1VS" imageView="BWK-f7-Dub" style="IBUITableViewCellStyleDefault" id="ifx-zM-FoL">
-                                <rect key="frame" x="0.0" y="94" width="430" height="47.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="430" height="47.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ifx-zM-FoL" id="hEl-LV-DkW">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="47.666667938232422"/>
@@ -88,13 +81,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Main" image="tablecells" catalog="system" id="0jU-Af-ndE"/>
-                    <navigationItem key="navigationItem" title="Person List" largeTitleDisplayMode="always" id="PoA-EC-q2c"/>
+                    <navigationItem key="navigationItem" title="Person List" id="PoA-EC-q2c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qv-w7-Fr5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="680" y="-335"/>
         </scene>
-        <!--Ext-->
+        <!--Person List-->
         <scene sceneID="SgF-Wz-6K0">
             <objects>
                 <tableViewController storyboardIdentifier="ExtListTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="IST-Az-xkB" customClass="ExtListTVC" customModule="HomeWork20" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,16 +95,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Un9-Ts-WH1">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="ExtCell" rowHeight="90" id="nKp-sA-TJj" customClass="CustomCell" customModule="HomeWork20" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="430" height="90"/>
+                                <rect key="frame" x="0.0" y="50" width="430" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nKp-sA-TJj" id="NKF-Be-SJj">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="90"/>
@@ -158,12 +144,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Ext" image="table.badge.more" catalog="system" id="yud-5h-FJq"/>
-                    <navigationItem key="navigationItem" id="lwc-qu-1ax"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Person List" id="lwc-qu-1ax"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Duq-1q-BRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694.88372093023258" y="354.72103004291847"/>
+            <point key="canvasLocation" x="730" y="350"/>
         </scene>
     </scenes>
     <resources>
