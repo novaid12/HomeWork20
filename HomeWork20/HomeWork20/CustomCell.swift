@@ -8,10 +8,9 @@
 import UIKit
 
 class CustomCell: UITableViewCell {
-
-    @IBOutlet weak var phoneNumberView: UILabel!
-    @IBOutlet weak var emailView: UILabel!
-    @IBOutlet weak var nameView: UILabel!
+    @IBOutlet var phoneNumberView: UILabel!
+    @IBOutlet var emailView: UILabel!
+    @IBOutlet var nameView: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,5 +20,4 @@ class CustomCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
