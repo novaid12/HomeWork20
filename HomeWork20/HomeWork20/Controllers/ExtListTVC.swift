@@ -10,10 +10,11 @@ import UIKit
 class ExtListTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Person List"
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return DataSource.createPersonList().count
+        return DataSource.personsList.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

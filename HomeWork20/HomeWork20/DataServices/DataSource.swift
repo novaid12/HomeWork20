@@ -52,8 +52,7 @@ class DataSource {
 
     static var personsList: [Person] = []
 
-    static func createPersonList() -> [Person] {
-        personsList = []
+    static func createPersonList() {
         nameList.shuffle()
         surNameList.shuffle()
         emailList.shuffle()
@@ -61,6 +60,5 @@ class DataSource {
         for i in 0 ..< 10 {
             personsList.append(Person(name: nameList[i], surName: surNameList[i], email: emailList[i], phoneNumber: phoneNumberList[i]))
         }
-        return personsList
     }
 }

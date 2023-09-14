@@ -10,11 +10,12 @@ import UIKit
 class MainListTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataSource.createPersonList()
+        navigationItem.title = "Person List"
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return DataSource.createPersonList().count
+        return DataSource.personsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
