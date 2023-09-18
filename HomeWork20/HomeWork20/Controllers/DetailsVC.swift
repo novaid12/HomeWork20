@@ -26,19 +26,17 @@ class DetailsVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        guard let person = person else { return }
-        nameLbl.text = person.name + " " + person.surName
-        emailLbl.text = person.email
-        phoneLbl.text = person.phoneNumber
+        nameLbl.text = person!.name + " " + person!.surName
+        emailLbl.text = person!.email
+        phoneLbl.text = person!.phoneNumber
     }
 
     @IBAction func editBtn() {
         if state == false {
-            guard let person = person else { return }
-            nameTF.text = person.name
-            surNameTF.text = person.surName
-            emailTF.text = person.email
-            phoneTF.text = person.phoneNumber
+            nameTF.text = person!.name
+            surNameTF.text = person!.surName
+            emailTF.text = person!.email
+            phoneTF.text = person!.phoneNumber
             nameTF.isHidden = false
             surNameTF.isHidden = false
             emailTF.isHidden = false
