@@ -57,7 +57,7 @@ class DataSource {
         surNameList.shuffle()
         emailList.shuffle()
         phoneNumberList.shuffle()
-        for i in 0 ..< 10 {
+        for i in 0 ..< nameList.count {
             personsList.append(Person(name: nameList[i], surName: surNameList[i], email: emailList[i], phoneNumber: phoneNumberList[i]))
         }
     }
