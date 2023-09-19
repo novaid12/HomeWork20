@@ -13,6 +13,10 @@ class ExtListTVC: UITableViewController {
         navigationItem.title = "Person List"
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return DataSource.personsList.count
     }
@@ -29,14 +33,24 @@ class ExtListTVC: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return DataSource.personsList[section].name + " " + DataSource.personsList[section].surName
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let person = DataSource.personsList[section]
+        let myView = UIView()
+        myView.backgroundColor = .darkGray
+        let label = UILabel(frame: CGRect(x: 20, y: 3, width: 300, height: 25))
+        label.text = person.name + " " + person.surName
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 25)
+        myView.addSubview(label)
+        return myView
     }
 
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = .white
-        header.backgroundConfiguration?.backgroundColor = .darkGray
-        header.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 17)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow,
+           let vc = segue.destination as? DetailsVC
+        {
+            vc.index = indexPath.section
+            vc.person = DataSource.personsList[indexPath.section]
+        }
     }
 }
